@@ -22,7 +22,7 @@ def main():
 
     visit_counts.plot.bar(ax=ax)
 
-    ax.set_title(f"Number of Visits by Description (≥ {COUNT} visits)")
+    ax.set_title(f"Number of Visits by Description in 2025 (≥ {COUNT} visits)")
     ax.set_xlabel("Description")
     ax.set_ylabel("Number of Transactions")
 

@@ -27,7 +27,7 @@ def main():
         startangle=90
     )
 
-    ax.set_title("Spending Breakdown by Description")
+    ax.set_title("Spending Breakdown by Description in 2025")
 
     ax.axis("equal")  # makes the pie circular
 

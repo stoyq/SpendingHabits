@@ -23,7 +23,7 @@ def main():
 
     monthly_counts.plot.bar(ax=ax, width=0.8)
 
-    ax.set_title("Number of Transactions per Month by Category")
+    ax.set_title("Number of Transactions per Month by Category in 2025")
     ax.set_xlabel("Month")
     ax.set_ylabel("Number of Transactions")
 

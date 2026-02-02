@@ -14,11 +14,12 @@ SpendingHabits/
 │   ├── read_td_chq.py                   # Reads TD Chequing CSV export
 │   ├── build_description_map.py         # Normalizes merchants and maps categories
 │   ├── build_processed.py               # Combines sources into one transactions file
-│   ├── build_spending_summary.py        # Aggregates spending and generates charts
-│   ├── build_custom_spending_summary.py # Grocery vs dining out bar chart (standalone)
-│   ├── build_custom_pie_chart.py        # Spending pie chart by merchant (standalone)
-│   ├── build_custom_count_chart.py      # Visit count bar chart by merchant (standalone)
-│   └── build_custom_visits_chart.py     # Monthly transaction count by target (standalone)
+│   └── build_spending_summary.py        # Aggregates spending and generates charts
+├── eda/
+│   ├── build_custom_spending_summary.py # Grocery vs dining out bar chart
+│   ├── build_custom_pie_chart.py        # Spending pie chart by merchant
+│   ├── build_custom_count_chart.py      # Visit count bar chart by merchant
+│   └── build_custom_visits_chart.py     # Monthly transaction count by target
 ├── data/
 │   ├── raw/
 │   │   ├── td_visa/                     # TD Visa CSV exports (multiple files)
@@ -60,10 +61,10 @@ Each step can be toggled on/off via the `STEPS` dict in `main.py`.
 These scripts run independently from the main pipeline and read from `data/processed/transactions_ask_claude_edit.csv`:
 
 ```bash
-python src/build_custom_spending_summary.py   # Grocery vs dining out monthly bar chart
-python src/build_custom_pie_chart.py          # Spending pie chart by merchant
-python src/build_custom_count_chart.py        # Visit count by merchant (>= 5 visits)
-python src/build_custom_visits_chart.py       # Monthly transaction count by target
+python eda/build_custom_spending_summary.py   # Grocery vs dining out monthly bar chart
+python eda/build_custom_pie_chart.py          # Spending pie chart by merchant
+python eda/build_custom_count_chart.py        # Visit count by merchant (>= 5 visits)
+python eda/build_custom_visits_chart.py       # Monthly transaction count by target
 ```
 
 ## EDA

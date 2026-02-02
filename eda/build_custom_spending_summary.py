@@ -22,7 +22,7 @@ def main():
     fig, ax = plt.subplots(figsize=(14, 7))
     monthly.plot.bar(stacked=False, ax=ax, width=0.8, color={"grocery": "#4CAF50", "dining out": "#FF7043"})
 
-    ax.set_title("Monthly Spending: Grocery vs Dining Out", fontsize=14)
+    ax.set_title("Monthly Spending: Grocery vs Dining Out in 2025", fontsize=14)
     ax.set_xlabel("Month")
     ax.set_ylabel("Amount ($)")
     ax.set_xticklabels([str(p) for p in monthly.index], rotation=45, ha="right")
