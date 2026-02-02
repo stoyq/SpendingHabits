@@ -66,7 +66,7 @@ def _plot_monthly_stacked_bar(processed: pd.DataFrame, max_debit: float | None =
     fig, ax = plt.subplots(figsize=(14, 7))
     monthly.plot.bar(stacked=True, ax=ax, width=0.8)
 
-    ax.set_title("Monthly Spending by Category", fontsize=14)
+    ax.set_title("Monthly Spending by Category in 2025", fontsize=14)
     ax.set_xlabel("Month")
     ax.set_ylabel("Amount ($)")
     ax.set_xticklabels([str(p) for p in monthly.index], rotation=45, ha="right")
