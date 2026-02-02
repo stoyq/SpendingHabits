@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 SUMMARY_PATH = "data/processed/spending_by_category.csv"
-CHART_PATH = "data/processed/monthly_spending_by_category.png"
+CHART_PATH = "images/monthly_spending_by_category.png"
 
 
 def build_spending_summary(processed: pd.DataFrame, debug: bool = False, chart_max_debit: float | None = None, date_from: str | None = None, date_to: str | None = None) -> pd.DataFrame:
@@ -73,6 +73,7 @@ def _plot_monthly_stacked_bar(processed: pd.DataFrame, max_debit: float | None =
     ax.legend(title="Category", bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=8)
 
     fig.tight_layout()
+    os.makedirs(os.path.dirname(CHART_PATH), exist_ok=True)
     fig.savefig(CHART_PATH, dpi=150)
     plt.close(fig)
     print(f"[spending_summary] chart saved to {CHART_PATH}")

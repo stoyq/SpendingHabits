@@ -2,6 +2,8 @@
 
 A personal finance pipeline that reads TD bank transaction CSVs, normalizes merchant descriptions, categorizes spending, and generates summary reports and charts.
 
+**[Exploratory Charts (EDA)](EDA.md)**
+
 ## Project Structure
 
 ```
@@ -63,6 +65,10 @@ python src/build_custom_pie_chart.py          # Spending pie chart by merchant
 python src/build_custom_count_chart.py        # Visit count by merchant (>= 5 visits)
 python src/build_custom_visits_chart.py       # Monthly transaction count by target
 ```
+
+## EDA
+
+See [EDA.md](EDA.md) for exploratory charts.
 
 ## Dependencies
 

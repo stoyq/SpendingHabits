@@ -1,8 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 INPUT_PATH = "data/processed/transactions_ask_claude_edit.csv"
-CHART_PATH = "data/processed/grocery_vs_dining_out.png"
+CHART_PATH = "images/grocery_vs_dining_out.png"
 
 
 def main():
@@ -28,6 +29,7 @@ def main():
     ax.legend(title="Category")
 
     fig.tight_layout()
+    os.makedirs(os.path.dirname(CHART_PATH), exist_ok=True)
     fig.savefig(CHART_PATH, dpi=150)
     plt.close(fig)
     print(f"Chart saved to {CHART_PATH}")

@@ -1,8 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 INPUT_PATH = "data/processed/transactions_ask_claude_edit.csv"
-CHART_PATH = "data/processed/spending_pie.png"
+CHART_PATH = "images/spending_pie.png"
 
 def main():
     df = pd.read_csv(INPUT_PATH)
@@ -31,6 +32,7 @@ def main():
     ax.axis("equal")  # makes the pie circular
 
     fig.tight_layout()
+    os.makedirs(os.path.dirname(CHART_PATH), exist_ok=True)
     fig.savefig(CHART_PATH, dpi=150)
     plt.close(fig)
 
